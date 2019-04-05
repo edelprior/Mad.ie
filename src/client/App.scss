@@ -1,0 +1,189 @@
+// Using the Material Docuemntation on
+// https://github.com/material-components/material-components-web-react
+// The Sass modules were imported within the terminal
+
+@import '@material/react-button/index.scss';
+@import '@material/react-drawer/index.scss';
+@import '@material/react-top-app-bar/index.scss';
+@import '@material/react-material-icon/index.scss';
+@import '@material/react-list/index.scss';
+@import '@material/react-layout-grid/index.scss';
+@import '@material/react-typography/index.scss';
+@import '@material/react-button/index.scss';
+@import '@material/react-card/index.scss';
+@import '@material/react-text-field/index.scss';
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+// Declaring universal variables in another Sass files to adhere
+// to good practice, found on https://sass-lang.com/documentation/file.SASS_REFERENCE.html
+// Keeps code clean and legible
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+@import "./colours";
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+// Importing Sass Mixins to customize the MDC components further
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+@import "@material/top-app-bar/mixins";
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+
+.LoginForm {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  }
+
+
+.LoginEmail {
+  height: 20%;
+  width: 110%;
+  margin-bottom: 5%;
+  @include mdc-text-field-outline-color($orange);
+  @include mdc-text-field-textarea-stroke-color(black);
+  @include mdc-text-field-label-color(black);
+}
+
+.LoginPassword {
+  height: 20%;
+  width: 110%;
+  margin-bottom: 15%;
+  @include mdc-text-field-outline-color($orange);
+  @include mdc-text-field-textarea-stroke-color(black);
+  @include mdc-text-field-label-color(black);
+}
+
+.LoginButton {
+  @include mdc-button-container-fill-color($orange);
+  @include mdc-button-ink-color(white);
+  margin-left: 35%;
+}
+.LoginAvatar {
+  margin-left: 25%;
+  margin-bottom: 20%;
+}
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+
+  .RegisterForm {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+.RegisterEmail {
+  height: 20%;
+  width: 110%;
+  margin-bottom: 5%;
+  @include mdc-text-field-outline-color($orange);
+  @include mdc-text-field-textarea-stroke-color(black);
+  @include mdc-text-field-label-color(black);
+}
+
+.RegisterPassword {
+  height: 20%;
+  width: 110%;
+  margin-bottom: 5%;
+  @include mdc-text-field-outline-color($orange);
+  @include mdc-text-field-textarea-stroke-color(black);
+  @include mdc-text-field-label-color(black);
+}
+
+.RegisterAvatar {
+  margin-left: 35%;
+  margin-bottom: 20%;
+}
+.RegisterButton {
+  @include mdc-button-container-fill-color($orange);
+  @include mdc-button-ink-color(white);
+  margin-left: 40%;
+
+}
+
+.PropCard {
+  padding: 2%;
+  background-color: $grey;
+}
+.areaCard {
+  padding: 2%;
+  background-color: $grey;
+}
+.propIcons {
+  padding: 3%;
+}
+
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+
+  .drawer-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .drawer-app-content {
+    flex: auto;
+    overflow: auto;
+  }
+  .mdc-drawer--dismissible {
+    top: auto;
+  }
+  .top-app-bar-fix-adjust {
+    display: flex;
+    width: 100%;
+  }
+  .TopAppBar{
+    @include mdc-top-app-bar-fill-color($transparent);
+    @include mdc-top-app-bar-icon-ink-color($blue);
+}
+.BidLink {
+  float: right;
+  transform: scale(1.45);
+}
+
+.commentList {
+  background-color: $grey;
+}
+icon {
+  transform: scale(1.45);
+}
+.menuicon {
+  margin-left: -10px;
+  transform: scale(1.2);
+}
+.logo {
+  margin-top: 45%;
+  margin-left: 40%;
+  margin-bottom: 10%;
+  transform: scale(4);
+  color: white;
+}
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+
+// - - - - - - - - - Drawer Styling - - - - - - - - - - - - //
+
+.drawer {
+  @include mdc-drawer-width(20%);
+  @include mdc-drawer-item-icon-ink-color(black);
+  @include mdc-drawer-surface-fill-color($blue);
+}
+.NavText {
+  height: 100%;
+    @include mdc-list-item-primary-text-ink-color(black);
+    @include mdc-typography(body1);
+}
+a {
+    text-decoration: none;
+    color: black !important;
+  }
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+// - - - - - - - - - Top App Bar Styling - - - - - - - - - - - - //
+
+.TopAppBar{
+    @include mdc-top-app-bar-fill-color($transparent);
+    @include mdc-top-app-bar-icon-ink-color($blue);
+}
