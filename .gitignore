@@ -2,9 +2,6 @@
 .DS_Store
 .node_modules
 *node_modules/*
-
-.vscode
-node_modules
-dist
+build
 *.log
 yarn.lock
