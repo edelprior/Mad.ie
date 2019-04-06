@@ -46,7 +46,7 @@ export default class Login extends Component {
           // run the login function in the parent component
           this.props.handleLogin();
           // redirect to /
-          this.props.history.push('/areas');
+          this.props.history.push('/');
         } else {
           const error = new Error(res.error);
           throw error;

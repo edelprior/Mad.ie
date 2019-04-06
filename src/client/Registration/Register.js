@@ -49,7 +49,7 @@ export default class Register extends Component {
     axios.post('/api/register', this.state)
       .then(res => {
         if (res.status === 200) {
-          this.props.history.push('/areas');
+          this.props.history.push('/');
         } else {
           const error = new Error(res.error);
           throw error;
