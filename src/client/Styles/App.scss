@@ -110,6 +110,11 @@
   padding: 3%;
 }
 
+
+.pricetag {
+
+  margin-bottom: -2%;
+}
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 
   .drawer-container {
@@ -135,8 +140,10 @@
     @include mdc-top-app-bar-icon-ink-color($blue);
 }
 .BidLink {
+  margin: 5%;
   float: right;
-  transform: scale(1.45);
+  transform: scale(1.5);
+
 }
 
 .commentList {
@@ -163,7 +170,7 @@ icon {
 // - - - - - - - - - Drawer Styling - - - - - - - - - - - - //
 
 .drawer {
-  @include mdc-drawer-width(20%);
+  @include mdc-drawer-width(25%);
   @include mdc-drawer-item-icon-ink-color(black);
   @include mdc-drawer-surface-fill-color($blue);
 }

@@ -6,19 +6,23 @@
   - Has the routes that will be accessed in the other components for CRUD
   */}
 
+
+// - - - - - React & Axios & Link & Styles - - - - - //
+
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-
+import '../../Styles/App.scss';
 
 // - - - - - Material Imports - - - - - - - - - - //
-import {Cell, Grid, Row} from '@material/react-layout-grid';
-import TextField, {HelperText, Input} from '@material/react-text-field';
+
+import { Cell, Grid, Row } from '@material/react-layout-grid';
+import TextField, { Input } from '@material/react-text-field';
 import Button from '@material/react-button';
 
 // - - - - - - - - - - - - - - - - - - - - - //
 
-class CreateComment extends Component {
+export default class CreateComment extends Component {
   constructor(props) {
     super(props);
     // store form fields in state
@@ -43,7 +47,7 @@ class CreateComment extends Component {
     // send a POST request to the server
     // the request includes the state, which is the info. for the new Comment to be created
     axios.post(`/api/comments/${this.props.match.params.id}`, this.state)
-      .then(res => this.props.history.push('/')) // if successful go to home
+      .then(res => this.props.history.push('/areas')) // if successful go to home
       .catch(error => {
         console.log(error);
       });
@@ -53,7 +57,6 @@ class CreateComment extends Component {
     return (
       <Grid>
         <form onSubmit={this.handleSubmit} className ="Form">
-
           <TextField textarea  className ="Form" label = 'Write your comment here'>
             <Input type="text"
               name="comment"
@@ -61,12 +64,9 @@ class CreateComment extends Component {
               onChange={this.handleChange}/>
           </TextField>
           <br/>
-
           <Button type="submit" value="Submit">Upload Comment</Button>
         </form>
       </Grid>
     );
   }
 }
-
-export default CreateComment;

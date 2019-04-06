@@ -1,13 +1,27 @@
+{/*
+  TODO
+
+
+
+
+  */}
+
+
+// - - - React, Link, Styles   - - - - - - - - //
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import './App.scss';
-import Property from './Property';
+import '../../Styles/App.scss';
+// - - - - -Material Imports - - - - - - - - - - - - - //
 import {Cell, Grid, Row} from '@material/react-layout-grid';
-import { Headline4, Headline5, Body1, Body2, Button} from '@material/react-typography';
-import CommentList from './CommentList';
+import { Headline4, Headline5, Body1, Button} from '@material/react-typography';
+// - - - - - - Components - - - - - - - - - - - - - - //
 
-class PropertyList extends Component {
+import Property from './Property';
+import CommentList from '../CRUD/CommentList';
+// - - - - - - - - - - - - - - - - - - - - //
+
+export default class PropertyList extends Component {
   constructor(props) {
     super(props);
     this.state = { properties: [] };
@@ -24,16 +38,16 @@ class PropertyList extends Component {
   }
 
   render() {
-    const propertyList = this.state.properties.map(u => (
+    const propertyList = this.state.properties.map(p => (
       <Property
-        key={u._id}
-        id={u._id}
-        name={u.name}
-        size={u.size}
-        bath = {u.bath}
-        description = {u.description}
-        image = {u.image}
-        price = {u.price}
+        key={p._id}
+        id={p._id}
+        name={p.name}
+        size={p.size}
+        bath = {p.bath}
+        description = {p.description}
+        image = {p.image}
+        price = {p.price}
       />
     ));
 
@@ -49,33 +63,12 @@ class PropertyList extends Component {
                 </Button>
               </Cell>
             </Row>
-            <Row>
-
-              {propertyList}
-
-            </Row>
+            <Row> {propertyList} </Row>
           </Cell>
           <Cell columns={1}/>
-        </Row>
-
-
-        <Row>
-          <Cell columns={1}/>
-          <Cell columns = {10}>
-            <Row>
-              <Cell columns={12}>
-                <Headline4>
-              Bids in {this.props.match.params.name}
-                </Headline4>
-              </Cell>
-
-            </Row>
-          </Cell>
         </Row>
       </Grid>
 
     );
   }
 }
-
-export default PropertyList;

@@ -1,14 +1,26 @@
+{/*
+  TODO
+  */}
+
+
+// - - - React, Link, Styles & Axios  - - - - - - - - //
+
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Area from './Area';
+import '../../Styles/App.scss';
 import axios from 'axios';
-import './App.scss';
+
+// - - - - -Material Imports - - - - - - - - - - - - - //
 import {Cell, Grid, Row} from '@material/react-layout-grid';
 
-class AreaList extends Component {
+// - - - - - - Components - - - - - - - - - - - - - - //
+import Area from './Area';
+
+// - - - - - - - - - - - - - - - - - - - - //
+
+export default class AreaList extends Component {
   constructor(props) {
     super(props);
-
     this.state = { areas: [] };
   }
 
@@ -24,17 +36,16 @@ class AreaList extends Component {
 
   render() {
 
-    const areaList = this.state.areas.map(u => (
+    const areaList = this.state.areas.map(a => (
       <Area
-        key={u._id}
-        id={u._id}
-        name={u.name}
-        image = {u.image}
+        key={a._id}
+        id={a._id}
+        name={a.name}
+        image = {a.image}
       />
     ));
 
     return (
-      <div>
         <Grid>
           <Row>
             <Cell columns={1}/>
@@ -46,9 +57,7 @@ class AreaList extends Component {
             <Cell columns={1}/>
           </Row>
         </Grid>
-      </div>
+
     );
   }
 }
-
-export default AreaList;

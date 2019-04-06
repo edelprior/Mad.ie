@@ -18,7 +18,8 @@
 import React, { Component } from 'react';
 import { Link, Route, Switch, HashRouter } from 'react-router-dom';
 import axios from 'axios';
-import './App.scss';
+
+import './Styles/App.scss';
 
 // - - - - -Material Imports - - - - - - - - - - - - - //
 
@@ -31,20 +32,21 @@ import TopAppBar, { TopAppBarFixedAdjust } from '@material/react-top-app-bar';
 
 // - - - - - - Components - - - - - - - - - - - - - - //
 
-import withAuth from './withAuth';
-import Home from './Home';
-import Start from './Start';
-import Login from './Login';
-import Register from './Register';
-import AreaList from './AreaList';
-import PropertyList from './PropertyList';
-import CreateComment from './CreateComment';
-import EditComment from './EditComment';
-import CommentList from './CommentList';
+import Authentication from './Registration/Authentication';
+import Login from './Registration/Login';
+import Register from './Registration/Register';
+
+import Home from './Components/Home';
+import AreaList from './Components/One-Many/AreaList';
+import PropertyList from './Components/One-Many/PropertyList';
+
+import CreateComment from './Components/CRUD/CreateComment';
+import EditComment from './Components/CRUD/EditComment';
+import CommentList from './Components/CRUD/CommentList';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 
-class App extends Component {
+export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -88,8 +90,7 @@ class App extends Component {
                   <ListItemGraphic className="logo" link="/" graphic={<MaterialIcon icon="home" />} />
                 </Link>
               </DrawerHeader>
-              <br/>
-              <br/>
+
               {/* - - - - - - - - - - */}
               <List className="NavList">
                 <ListItem>
@@ -131,7 +132,6 @@ class App extends Component {
             </DrawerContent>
           </Drawer>
 
-
           <DrawerAppContent className="drawer-app-content">
             <TopAppBar
               className="TopAppBar"
@@ -148,14 +148,14 @@ class App extends Component {
 
 
               <Route path="/" exact component={Home} />
-              <Route exact path="/areas" component={AreaList}/>
-              <Route path="/areas/:name/properties/:id" component={PropertyList}/>
               <Route path="/register" component={Register} />
               <Route path="/login" render={(props) => <Login {...props} handleLogin={this.login} />} />
               <Route path="/logout" render={this.logout}/>
-              <Route path="/properties/:id/comments" component ={CommentList} />
-              <Route path="/edit-comment/:id" component={EditComment}/>
-              <Route path="/create-comment/:id" component={CreateComment}/>
+              <Route exact path="/areas" component={Authentication(AreaList)}/>
+              <Route path="/areas/:name/properties/:id" component={Authentication(PropertyList)}/>
+              <Route path="/properties/:id/comments" component ={Authentication(CommentList)} />
+              <Route path="/edit-comment/:id" component={Authentication(EditComment)}/>
+              <Route path="/create-comment/:id" component={Authentication(CreateComment)}/>
             </TopAppBarFixedAdjust>
           </DrawerAppContent>
         </div>
@@ -163,5 +163,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;

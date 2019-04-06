@@ -1,11 +1,21 @@
+{/*
+  TODO
+  */}
+
+
+// - - - React, Link and Styles  - - - - - - - - //
 import React, { Component } from 'react';
 import axios from 'axios';
-import TextField, {HelperText, Input} from '@material/react-text-field';
-import MaterialIcon from '@material/react-material-icon';
+import '../Styles/App.scss';
+
+// - - - - -Material Imports - - - - - - - - - - - - - //
+import TextField, { Input } from '@material/react-text-field';
 import Button from '@material/react-button';
 import Avatar from 'react-avatar';
-import {Cell, Grid, Row} from '@material/react-layout-grid';
-import './App.scss';
+import { Cell, Grid, Row } from '@material/react-layout-grid';
+
+// - - - - - - - - - - - - - - - - - - - - //
+
 export default class Login extends Component {
   constructor(props) {
     super(props);
@@ -16,7 +26,8 @@ export default class Login extends Component {
 
     this.handleInputChange = this.handleInputChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
-  }
+  };
+// - - - - - - - - - - - - - - - - - - - - //
 
   handleInputChange(event) {
     const { value, name } = event.target;
@@ -24,6 +35,8 @@ export default class Login extends Component {
       [name]: value
     });
   }
+
+// - - - - - - - - - - - - - - - - - - - - //
 
   onSubmit(event) {
     event.preventDefault();
@@ -33,7 +46,7 @@ export default class Login extends Component {
           // run the login function in the parent component
           this.props.handleLogin();
           // redirect to /
-          this.props.history.push('/');
+          this.props.history.push('/areas');
         } else {
           const error = new Error(res.error);
           throw error;
@@ -45,14 +58,17 @@ export default class Login extends Component {
       });
   }
 
+  // - - - - - - - - - - - - - - - - - - - - //
+
   render() {
     return (
       <Grid className = "LoginForm">
         <Row>
-
           <Cell columns = {12}>
             <Avatar className = "LoginAvatar"
-              round = {true} color={Avatar.getRandomColor('sitebase', ['red', 'black', 'black'])} name="E" />
+                    round = { true }
+                    color = {Avatar.getRandomColor('sitebase', ['red', 'black', 'black'])}
+                    name = "E" />
 
             <form onSubmit={this.onSubmit}>
               <TextField outlined className = "LoginEmail">
@@ -67,6 +83,7 @@ export default class Login extends Component {
             </form>
           </Cell>
         </Row>
+
         <Row>
           <Cell columns = {12}>
             <form onSubmit = {this.onSubmit}>
@@ -83,6 +100,7 @@ export default class Login extends Component {
             </form>
           </Cell>
         </Row>
+
         <Row>
           <Cell columns = {12}>
             <form onSubmit = {this.onSubmit}>
@@ -90,7 +108,6 @@ export default class Login extends Component {
             </form>
           </Cell>
         </Row>
-
       </Grid>
 
     );

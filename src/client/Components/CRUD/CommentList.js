@@ -7,27 +7,29 @@
   - List gets updated with each interaction.
   */}
 
-// - - - - - React & Axios & Link - - - - - - //
+// - - - - - React & Axios & Link & Styles - - - - - //
 
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import './App.scss';
-import MaterialIcon from '@material/react-material-icon';
-import { Body1 } from '@material/react-typography';
-import Property from './Property';
+import '../../Styles/App.scss';
 
 // - - - - - Material Imports - - - - - - - - //
+
 import Button from '@material/react-button';
+import MaterialIcon from '@material/react-material-icon';
+import { Body1 } from '@material/react-typography';
 
 // - - - - - Components - - - - - - - - - - //
+
 import Comment from './Comment';
+import Property from '../One-Many/Property';
 
 // - - - - - - - - - - - - - - - - - - - - - //
 
 
 
-class CommentList extends Component {
+export default class CommentList extends Component {
   constructor(props) {
     super(props);
     {/*  store the array that will be gotten from the DB
@@ -98,29 +100,24 @@ class CommentList extends Component {
 
     return (
       <div>
-        <Property
-          id={this.state.property._id}
-          name={this.state.property.name}
-          size={this.state.property.size}
-          bath = {this.state.property.bath}
-          description = {this.state.property.description}
-          image = {this.state.property.image}
-          price = {this.state.property.price}
-        />
-
-        <Link className = "BidLink" to={`/create-comment/${this.props.match.params.id}`}>
-          <MaterialIcon className = "BidLink" icon = "add" type="button"/>
-
-
-        </Link>
-
-        <div className = "commentList">{commentList}</div>
-
-
-
+          <Property
+            id={this.state.property._id}
+            name={this.state.property.name}
+            size={this.state.property.size}
+            bath = {this.state.property.bath}
+            description = {this.state.property.description}
+            image = {this.state.property.image}
+            price = {this.state.property.price}
+          />
+          <Link className = "BidLink"
+                to = { `/create-comment/${this.props.match.params.id}` }>
+          <MaterialIcon
+            className = "BidLink"
+            icon = "add"
+            type="button" />
+          </Link>
+          <div className = "commentList">{commentList}</div>
       </div>
     );
   }
 }
-
-export default CommentList;

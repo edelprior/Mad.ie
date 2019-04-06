@@ -1,8 +1,14 @@
+{/*
+  TODO fragments function class
+  */}
+
+
+// - - - React, Redirect & Axios  - - - - - - - - //
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 
-export default function withAuth(ComponentToProtect) {
+export default function Authentication(ComponentToProtect) {
   return class extends Component {
     constructor() {
       super();
