@@ -1,9 +1,11 @@
-# mern-full-stack-auth-state
+# Advanced JavaScript CA1 || January 2019
 
-Example application showing how to implement user authentication with a MERN stack.
+---
 
-This project extends the [previous project](https://github.com/IADT-AdvancedJS/mern-full-stack-auth) by storing the user's login status in state. Login+register links are displayed if the user is not logged in, whereas a logout link is rendered only if they are logged in.
+Using the React front-end JS library and an API from The Guardian, giving access to the archives of content the website has, a web app was developed.
 
-The authentication system in this project is based on [Fabian Virani's article](https://medium.com/@faizanv/authentication-for-your-react-and-express-application-w-json-web-tokens-923515826e0). Please read this to get a detailed description of the code. In particular note that the authentication is based on the storage of JavaScript Web Tokens (JWTs) in browser cookies.
+---
 
-![Gif of app in action](https://i.imgur.com/83RSKPG.gif)
+### [Live Application hosted on GH Pages Here](https://edelprior.github.io/AJS_CA1/)
+
+#### To view the code on a local machine, download 'The_Guardian', run `npm install`, and then `npm start` to begin the local host.
