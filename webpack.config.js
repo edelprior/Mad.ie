@@ -8,8 +8,8 @@ const outputDirectory = 'build';
 module.exports = {
   entry: ['./src/client/Styles/App.scss', './src/client/index.js'],
   output: {
-    path: path.join(__dirname, outputDirectory),
-    filename: 'bundle.js'
+    path: __dirname + '/dist',
+    filename: 'index_bundle.js'
   },
   module: {
     rules: [
