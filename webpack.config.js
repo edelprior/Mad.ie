@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 
-const outputDirectory = 'dist';
+const outputDirectory = 'build';
 
 module.exports = {
   entry: ['./src/client/Styles/App.scss', './src/client/index.js'],
