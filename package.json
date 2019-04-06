@@ -10,6 +10,7 @@
     "server": "nodemon src/server/index.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Edel Prior",
   "licence": "MIT",
