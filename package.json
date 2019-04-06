@@ -1,7 +1,7 @@
 {
-  "name": "working-CA2",
+  "name": "mad-ie",
   "version": "1.0.0",
-  "description": "REACTCA2",
+  "description": "Advanced JS CA2",
   "main": "src/server/index.js",
   "scripts": {
     "build": "webpack --mode production",
@@ -9,8 +9,7 @@
     "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
     "server": "nodemon src/server/index.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "heroku-postbuild": "echo Skip build on Heroku"
   },
   "author": "Edel Prior",
   "licence": "MIT",
