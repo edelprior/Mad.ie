@@ -92,8 +92,7 @@ and Express URL Parameters the id of each area is accessed and only the properti
 ```
 
 ##### Properties - Comments
-Using the same idea as above, a ```property_id
-``` commment was injected into the JSON data for comment, acting as a foreign key and creating a one - many relationship with the help of Express' Parameters.
+Using the same idea as above, a property_id commment was injected into the JSON data for comment, acting as a foreign key and creating a one - many relationship with the help of Express' Parameters.
 
 
 
