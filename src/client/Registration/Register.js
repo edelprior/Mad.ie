@@ -11,7 +11,7 @@
 
 import React, { Component } from 'react';
 import axios from 'axios';
-import '../Styles/App.scss';
+// import '../Styles/App.scss';
 
 // - - - - - Material Imports - - - - - - - - //
 
@@ -35,14 +35,14 @@ export default class Register extends Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
 
-// - - - - - - - - - - - - - - - - - - - - - //
+  // - - - - - - - - - - - - - - - - - - - - - //
   handleInputChange(event) {
     const { value, name } = event.target;
     this.setState({
       [name]: value
     });
   }
-// - - - - - - - - - - - - - - - - - - - - - //
+  // - - - - - - - - - - - - - - - - - - - - - //
 
   onSubmit(event) {
     event.preventDefault();
@@ -61,7 +61,7 @@ export default class Register extends Component {
       });
   }
 
-// - - - - - - - - - - - - - - - - - - - - - //
+  // - - - - - - - - - - - - - - - - - - - - - //
   render() {
     return (
       <Grid className = "RegisterForm">
@@ -73,27 +73,27 @@ export default class Register extends Component {
               color={Avatar.getRandomColor('sitebase', ['red', 'black', 'black'])}
               name="Register" />
 
-              <form  onSubmit={this.onSubmit}>
-                <TextField className = "RegisterEmail" outlined>
-                  <Input
-                    type="name"
-                    name="name"
-                    placeholder="name"
-                    value={this.state.name}
-                    onChange={this.handleInputChange}
-                    required />
-                </TextField>
+            <form  onSubmit={this.onSubmit}>
+              <TextField className = "RegisterEmail" outlined>
+                <Input
+                  type="name"
+                  name="name"
+                  placeholder="name"
+                  value={this.state.name}
+                  onChange={this.handleInputChange}
+                  required />
+              </TextField>
 
-                <TextField className = "RegisterEmail" outlined>
-                  <Input
-                    type="email"
-                    name="email"
-                    placeholder="email"
-                    value={this.state.email}
-                    onChange={this.handleInputChange}
-                    required />
-                </TextField>
-              </form>
+              <TextField className = "RegisterEmail" outlined>
+                <Input
+                  type="email"
+                  name="email"
+                  placeholder="email"
+                  value={this.state.email}
+                  onChange={this.handleInputChange}
+                  required />
+              </TextField>
+            </form>
           </Cell>
         </Row>
 

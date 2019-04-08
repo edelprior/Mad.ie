@@ -11,7 +11,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import '../../Styles/App.scss';
+// import '../../Styles/App.scss';
 // - - - - -Material Imports - - - - - - - - - - - - - //
 import {Cell, Grid, Row} from '@material/react-layout-grid';
 import { Headline4, Headline5, Body1, Button} from '@material/react-typography';

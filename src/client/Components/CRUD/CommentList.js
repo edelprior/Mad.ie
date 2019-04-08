@@ -12,7 +12,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import '../../Styles/App.scss';
+// import '../../Styles/App.scss';
 
 // - - - - - Material Imports - - - - - - - - //
 
@@ -100,23 +100,23 @@ export default class CommentList extends Component {
 
     return (
       <div>
-          <Property
-            id={this.state.property._id}
-            name={this.state.property.name}
-            size={this.state.property.size}
-            bath = {this.state.property.bath}
-            description = {this.state.property.description}
-            image = {this.state.property.image}
-            price = {this.state.property.price}
-          />
-          <Link className = "BidLink"
-                to = { `/create-comment/${this.props.match.params.id}` }>
+        <Property
+          id={this.state.property._id}
+          name={this.state.property.name}
+          size={this.state.property.size}
+          bath = {this.state.property.bath}
+          description = {this.state.property.description}
+          image = {this.state.property.image}
+          price = {this.state.property.price}
+        />
+        <Link className = "BidLink"
+          to = { `/create-comment/${this.props.match.params.id}` }>
           <MaterialIcon
             className = "BidLink"
             icon = "add"
             type="button" />
-          </Link>
-          <div className = "commentList">{commentList}</div>
+        </Link>
+        <div className = "commentList">{commentList}</div>
       </div>
     );
   }

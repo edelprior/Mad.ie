@@ -12,7 +12,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
-import '../../Styles/App.scss';
+// import '../../Styles/App.scss';
 
 // - - - - - Material Imports - - - - - - - - - - //
 
@@ -34,7 +34,7 @@ export default class Comment extends Component {
             <List>
               <ListItem>
                 <Body1> {this.props.comment} </Body1>
-                  <Button className = "pricetag"> €{this.props.price}</Button>
+                <Button className = "pricetag"> €{this.props.price}</Button>
               </ListItem>
             </List>
           </Cell>
