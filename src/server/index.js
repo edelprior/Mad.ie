@@ -1,7 +1,6 @@
 // - - - - - - - - - - - - - - - - - - - - - -
 // - - - - Login, One-Many, and CRUD - - - - -
 // - - - - - - - - - - - - - - - - - - - - - -
-
 // - - - - - - - - - - - - - - - - - - - - - -
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -64,9 +63,9 @@ app.post('/api/register', function(req, res) {
   user.save(function(err) {
     if (err) {
       console.log(err);
-      res.status(500).send('Error registering new user please try again.');
+      res.status(500).send('Error registering, please try again');
     } else {
-      res.status(200).send('Welcome to the club!');
+      res.status(200).send('Welcome!');
     }
   });
 });

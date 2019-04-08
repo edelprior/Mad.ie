@@ -1,5 +1,5 @@
 {/*
-  TODO
+  Home.js = A universal page (without authentication)
   */}
 
 
@@ -47,7 +47,7 @@ export default class Home extends Component {
           </Cell>
         </Row>
 
-      <br/>
+        <br/>
 
         <Row>
           <Cell columns = {6}>

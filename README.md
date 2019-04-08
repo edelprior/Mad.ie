@@ -1,12 +1,30 @@
-# Advanced JavaScript CA2 || April 2019
-
+# Advanced JavaScript CA2 || April 2019 📓 🌿
 ---
-
-Using React, MongoDB, Express and Node a full stack web application was developed.
+### ◆◆ Develop a full web application stack (front end and back end) using MongoDB, Express, React and Node ~ MERN ◆◆
 ---
+## CA Requirements 🍩
+- Make use of the technologies MongoDB, Express, React, Node.
+- Follow best practice using JS ES6 features where appropriate.
+- Your React app should follow the best practices outlined in the CA1
+assignment brief.
+- MongoDB database should be populated with appropriate sample
+data.
+- Create, Read, Update and Delete operations must be facilitated.
+- Hosted online, e.g. using Heroku and MongoDB Atlas.
+- Your code should be formatted appropriately. See the lecture notes for
+code style guidelines and examples. Consider using a code linter.
+- Some basic styling (CSS) applied. Should be responsive and work on
+desktop, mobile and tablet resolutions.
 
-### [Live Application hosted on Firebase Here](https://mad-ie.firebaseapp.com/#/)
-# Local Setup
+## [View the Project Live on Glitch ](https://edelprior-mad-ie.glitch.me/#) 🐚
+
+## 🌈 [Project Report ](REPORT.md)
+
+
+***
+
+## Local Setup
+
 
 This React application uses [MDC React](https://github.com/material-components/material-components-web-react) and requires a bit of extra setup to get started. To be able to run this locally you will need to [install Sass](https://sass-lang.com/install) using `npm install -g sass`.
 
