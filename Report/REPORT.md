@@ -17,7 +17,7 @@
 
 ### 🌈 User Stories
 
-- As  a first time buyer, I want to see what properties are available in my area so I can compare and get what's best for me.
+- As a first time buyer, I want to see what properties are available in my area so I can compare and get what's best for me.
 - As a Real Estate Agent, I want to see what types of bids my properties are getting, so I can analyse the trends in the market.
 - As a home owner, I want to be able to browse the properties available in my area, so I can see what is on the market.
 - As a student not yet living away from home, I want to see how details about the properties, and more information so I know what I will or will not be able to afford.
@@ -112,6 +112,8 @@ Perhaps the biggest issue of this project was getting it deployed. Many things c
 before public.
 
 However, webpack.config still has caused me errors, and when deploying to glitch (the environment became easier as I code edit and view the compiled code very quickly) still gives me errors about webpack not being installed, but I have it in my package.json, and my webpack.config file is identical to when it was working earlier on in the day.
+
+I went back to my package.json after finishing the report and was able to fix the issues described above. The error seems to be in the order at which I called things in the package.json, but I will be looking into it more. 
 
 
 ### 🌈 Reflection
