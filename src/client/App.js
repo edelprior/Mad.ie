@@ -19,7 +19,7 @@ import React, { Component } from 'react';
 import { Link, Route, Switch, HashRouter } from 'react-router-dom';
 import axios from 'axios';
 
-// import './Styles/App.scss';
+import './Styles/App.scss';
 
 // - - - - -Material Imports - - - - - - - - - - - - - //
 
