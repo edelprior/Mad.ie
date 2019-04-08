@@ -1,6 +1,6 @@
 # Advanced JavaScript CA2 || April 2019 📓 🌿
 ---
-## ◆◆ Develop a full web application stack (front end and back end) using ~ MERN ◆◆
+## ◆ Develop a full web application stack (front end and back end) using ~ MERN ◆
 ---
 ## CA Requirements 🍩
 - Make use of the technologies MongoDB, Express, React, Node.
