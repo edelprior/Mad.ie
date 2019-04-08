@@ -7,7 +7,7 @@
 
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import '../../Styles/App.scss';
+import '../../Styles/App.scss';
 import axios from 'axios';
 
 // - - - - -Material Imports - - - - - - - - - - - - - //
@@ -46,17 +46,17 @@ export default class AreaList extends Component {
     ));
 
     return (
-      <Grid>
-        <Row>
-          <Cell columns={1}/>
-          <Cell columns = {10}>
-            <Row>
-              {areaList}
-            </Row>
-          </Cell>
-          <Cell columns={1}/>
-        </Row>
-      </Grid>
+        <Grid>
+          <Row>
+            <Cell columns={1}/>
+            <Cell columns = {10}>
+              <Row>
+                {areaList}
+              </Row>
+            </Cell>
+            <Cell columns={1}/>
+          </Row>
+        </Grid>
 
     );
   }

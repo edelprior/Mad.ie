@@ -12,7 +12,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-// import '../../Styles/App.scss';
+import '../../Styles/App.scss';
 
 // - - - - - Material Imports - - - - - - - - //
 
@@ -79,26 +79,26 @@ export default class EditComment extends Component {
         <Row>
           <Cell columns = {12}>
             <Headline5> Edit a Comment </Headline5>
-            <form onSubmit={this.handleSubmit}>
+              <form onSubmit={this.handleSubmit}>
 
-              <TextField textarea className = "Form" label = "What would you like to change?">
-                <Input type="text"
-                  name="comment"
-                  value={this.state.comment}
-                  onChange={this.handleChange} />
-              </TextField>
+                  <TextField textarea className = "Form" label = "What would you like to change?">
+                      <Input type="text"
+                        name="comment"
+                        value={this.state.comment}
+                        onChange={this.handleChange} />
+                  </TextField>
 
-              <Button type="button"
-                onClick={() => {
-                  this.props.handleDelete(this.props.comment);
-                }}>
+                  <Button type="button"
+                          onClick={() => {
+                            this.props.handleDelete(this.props.comment);
+                          }}>
                       Delete Comment
-              </Button>
+                  </Button>
 
-              <Button type="submit"
-                value="Submit">
+                  <Button type="submit"
+                          value="Submit">
                       Re - Upload Comment
-              </Button>
+                  </Button>
             </form>
           </Cell>
         </Row>
