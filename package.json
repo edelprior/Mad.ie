@@ -9,7 +9,7 @@
     "client": "webpack-dev-server --mode development --devtool false --hot",
     "server": "nodemon src/server/index.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "echo Skip build on Heroku"
+    "postinstall": "ng build"
   },
   "author": "Edel Prior",
   "licence": "MIT",
