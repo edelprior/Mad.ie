@@ -24,9 +24,9 @@
 
 ### 🌈 Wireframes
 
-[](images/Wireframe_01.jpg)
+![](images/Wireframe_01.jpg)
 
-[](images/Wireframe_02.jpg)
+![](images/Wireframe_02.jpg)
 
 ### 🌈 API End Ponts
 
