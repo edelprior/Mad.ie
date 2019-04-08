@@ -44,9 +44,48 @@ The Authentication function checks to see if there is a JSON Web Token within th
 <Route path="/areas/:name/properties/:id" component={Authentication(PropertyList)}/>
 <Route path="/properties/:id/comments" component ={Authentication(CommentList)} />
 <Route path="/edit-comment/:id" component={Authentication(EditComment)}/>
-<Route path="/create-comment/:id" component={Authentication(CreateComment)}/> ```
+<Route path="/create-comment/:id" component={Authentication(CreateComment)}/>
+
+```
+
 
 
 ### 🌈 Description
+
+#### ⚡️ Create, Read Update and Delete 'Comments' ⚡️
+
+Following an example on the IADT AdvancedJS GitHub example  with users, I was able to create a ``` <Comment/>``` component that allowed the user to create a bid on a property, edit and delete, and view the other bids associated with that property.
+
+Connecting the application to a cloud Database using Mongo Atlas, I created collections within my MonogDB that contained sample information of comments.
+These comments had key value pairs as follows :
+```js
+ { _id: ObjectID ("5ca88ce4ac6a9b0fcf641598")
+  comment: "600,000"
+  property_id: ObjectID ("5ca224a9e066e40322145fea")
+}```
+
+The Property ID was associated with each specific property in the property list, behaving as a foreign key in the comment component. It was accessed through Express URL Parameters, in the axios request that populates the comment list.   ```
+  axios.get(`api/properties/${this.props.match.params.id}/comments`)
+  ```
+#### ⚡️ Authentication ⚡️
+
+Using an example also found on the IADT AdvancedJS website, I implemented a Register / Log in function using JSON web tokens, Bcrypt to hash the passwords stored in the Database to create a user interface in the application.
+
+#### ⚡️ One - Many DB Structure  ⚡️
+
+
+
+#### ⚡️ URL Parameters  ⚡️
+
+
+
+
+#### ⚡️ Styling  ⚡️
+
+
+
+
+#### ⚡️ Deployment  ⚡️
+
 
 ### 🌈 Reflection
