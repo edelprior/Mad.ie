@@ -42,7 +42,7 @@ mongoose.connect(mongo_uri, { useNewUrlParser: true }, function(err) {
 });
 
 
-app.use(express.static(path.join(__dirname, '/public'))); // Needed?
+app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.static('dist'));
 // app.get('/', function(req, res) {
 //   res.sendFile(path.join(__dirname, 'public', 'index.html'));
