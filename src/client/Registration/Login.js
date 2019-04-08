@@ -6,7 +6,7 @@
 // - - - React, Link and Styles  - - - - - - - - //
 import React, { Component } from 'react';
 import axios from 'axios';
-// import '../Styles/App.scss';
+import '../Styles/App.scss';
 
 // - - - - -Material Imports - - - - - - - - - - - - - //
 import TextField, { Input } from '@material/react-text-field';
@@ -27,8 +27,7 @@ export default class Login extends Component {
     this.handleInputChange = this.handleInputChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   };
-
-  // - - - - - - - - - - - - - - - - - - - - //
+// - - - - - - - - - - - - - - - - - - - - //
 
   handleInputChange(event) {
     const { value, name } = event.target;
@@ -37,7 +36,7 @@ export default class Login extends Component {
     });
   }
 
-  // - - - - - - - - - - - - - - - - - - - - //
+// - - - - - - - - - - - - - - - - - - - - //
 
   onSubmit(event) {
     event.preventDefault();
@@ -67,9 +66,9 @@ export default class Login extends Component {
         <Row>
           <Cell columns = {12}>
             <Avatar className = "LoginAvatar"
-              round = { true }
-              color = {Avatar.getRandomColor('sitebase', ['red', 'black', 'black'])}
-              name = "E" />
+                    round = { true }
+                    color = {Avatar.getRandomColor('sitebase', ['red', 'black', 'black'])}
+                    name = "E" />
 
             <form onSubmit={this.onSubmit}>
               <TextField outlined className = "LoginEmail">
