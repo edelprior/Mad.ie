@@ -18,7 +18,7 @@ desktop, mobile and tablet resolutions.
 
 ## [View the Project Live on Glitch ](https://edelprior-mad-ie.glitch.me/#) 🐚
 
-## 🌈 [Project Report ](REPORT.md)
+## 🌈 [Project Report ](https://github.com/edelprior/Mad.ie/blob/master/Report/REPORT.md)
 
 
 ***
