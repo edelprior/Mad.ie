@@ -67,7 +67,7 @@ These comments had key value pairs as follows :
 The Property ID was associated with each specific property in the property list, behaving as a foreign key in the comment component. It was accessed through Express URL Parameters, in the axios request that populates the comment list.
 ```
   axios.get(`api/properties/${this.props.match.params.id}/comments`)
-  ```
+```
 #### ⚡️ Authentication ⚡️
 
 Using an example also found on the IADT AdvancedJS website, I implemented a Register / Log in function using JSON web tokens, Bcrypt to hash the passwords stored in the Database to create a user interface in the application.
